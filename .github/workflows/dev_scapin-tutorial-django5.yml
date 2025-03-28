@@ -36,6 +36,11 @@ jobs:
       - name: Generate requirements.txt (for Azure compatibility)
         run: |
           poetry run pip freeze > requirements.txt  # Gera o requirements.txt usando o pip dentro do ambiente virtual do Poetry
+
+      - name: Run collectstatic
+        run: |
+          poetry run python manage.py collectstatic --noinput  # Coleta os arquivos estáticos do Django
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
