@@ -24,13 +24,18 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Create and start virtual environment
+      - name: Install Poetry
         run: |
-          python -m venv venv
-          source venv/bin/activate
-      
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
+      run: |
+        poetry install --no-dev  # Instala as dependências sem as de desenvolvimento
+
+    - name: Generate requirements.txt (for Azure compatibility)
+      run: |
+        poetry export -f requirements.txt --without-hashes -o requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
