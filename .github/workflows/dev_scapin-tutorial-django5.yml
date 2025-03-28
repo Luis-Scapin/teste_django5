@@ -35,7 +35,7 @@ jobs:
   
       - name: Generate requirements.txt (for Azure compatibility)
         run: |
-          poetry lock --requirements --no-dev > requirements.txt
+          poetry run pip freeze > requirements.txt  # Gera o requirements.txt usando o pip dentro do ambiente virtual do Poetry
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
