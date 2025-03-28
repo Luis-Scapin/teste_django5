@@ -35,7 +35,7 @@ jobs:
   
       - name: Generate requirements.txt (for Azure compatibility)
         run: |
-          poetry export -f requirements.txt --without-hashes -o requirements.txt
+          poetry lock --requirements --no-dev > requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
