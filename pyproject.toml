@@ -1,0 +1,18 @@
+[project]
+name = "teste-django5"
+version = "0.1.0"
+description = "Tutorial do Django 5"
+authors = [
+    {name = "Luis Scapin"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12,<4"
+dependencies = [
+    "django (>=5)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
