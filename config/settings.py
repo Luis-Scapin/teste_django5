@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j3rsb@5uobjlstyx%3!)19hxf-bji!w0$l00l=p8r_*u-ymj)@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["scapin-tutorial-django5.azurewebsites.net"]
 
 
 # Application definition
