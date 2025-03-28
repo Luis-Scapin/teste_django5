@@ -28,6 +28,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["scapin-tutorial-django5.azurewebsites.net"]
 
+CSRF_TRUSTED_ORIGINS = ["scapin-tutorial-django5.azurewebsites.net"]
+
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
 
 # Application definition
 
