@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["scapin-tutorial-django5.azurewebsites.net"]
 
 CSRF_TRUSTED_ORIGINS = ["https://scapin-tutorial-django5.azurewebsites.net"]
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
