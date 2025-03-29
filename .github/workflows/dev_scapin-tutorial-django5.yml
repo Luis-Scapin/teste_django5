@@ -21,6 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Secret
+        run: echo $DATABASE_URL
+
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
