@@ -16,7 +16,7 @@ jobs:
     permissions:
       contents: read #This is required for actions/checkout
     env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL: ${{ secrets.DJANGO_DB_URL }}
 
     steps:
       - uses: actions/checkout@v4
