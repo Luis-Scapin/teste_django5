@@ -41,6 +41,10 @@ jobs:
         run: |
           poetry run python manage.py collectstatic --noinput  # Coleta os arquivos estáticos do Django
 
+      - name: Run migrations
+        run: |
+          poetry run python manage.py migrate  # Roda as migrações
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 

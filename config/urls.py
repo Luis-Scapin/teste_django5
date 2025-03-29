@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("polls/", include("apps.polls.urls")),
-    path("admin/", admin.site.urls),
+    path("", include("apps.core.urls"), name="core"),
+    path("polls/", include("apps.polls.urls"), name="polls"),
+    path("admin/", admin.site.urls, name="admin"),
 ]
