@@ -17,12 +17,10 @@ jobs:
       contents: read #This is required for actions/checkout
     env:
       DATABASE_URL: ${{ secrets.DJANGO_DB_URL }}
+      DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Secret
-        run: echo $DATABASE_URL
 
       - name: Set up Python version
         uses: actions/setup-python@v5
